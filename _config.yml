@@ -7,13 +7,13 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Your Name / Site Title"
+title                    : "Qiuye He / 网页名字"
 title_separator          : "-"
-name                     : &name "Yan He"
-description              : &description "Gugu zuzhang"
-url                      : https://heyan.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : &name "Qiuye He"
+description              : &description "Gugu 自我介绍"
+url                      : https://heyan.github.io # 按照咕咕的网址改一下 the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "heyan/heyan.github.io"
+repository               : "heyan/heyan.github.io" # 按照咕咕的github目录改一下呢
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
@@ -80,14 +80,14 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Sidebar Name"
-  avatar           : "profile.png"
-  bio              : "Your biography for the left-hand sidebar"
-  location         : "Location"
+  name             : "Qiuye He" #名字
+  avatar           : "profile.png" #头像
+  bio              : "Your biography for the left-hand sidebar" #biography简介
+  location         : "Location" #地理位置
   employer         :
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "http://yourfullgooglescholarurl.com"
-  email            :
+  googlescholar    : "http://yourfullgooglescholarurl.com" #google scholar 链接
+  email            : "qiuye.he@ou.edu"#邮箱
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -96,13 +96,13 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "academicpages"
+  github           : "academicpages" #github 链接
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
+  linkedin         : #linkedin
   orcid            : "http://orcid.org/yourorcidurl"
   pinterest        :
   soundcloud       :

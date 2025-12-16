@@ -25,7 +25,7 @@ function initCommandCycling() {
   ];
 
   const commandOutputs = [
-    "heyan@ou.edu - PhD Student in Computer Science | Seeking faculty jobs!",
+    "heyan@ou.edu - PhD Candidate in Computer Science",
     "NDSS 2026: PhantomMotion laser attacks\nRAID 2025: MotionDecipher VR inference\nIEEE TMC 2023: Camera localization\nCCS 2023: Free tier camera identification\nMobiSys 2021: MotionCompass camera pinpointing\nMASS 2020: Virtual Step PIN Pad foot-input authentication",
     "Email: heyan@ou.edu\nLocation: University of Oklahoma, Norman, OK\nLinkedIn: linkedin.com/in/heyanok\nGoogle Scholar: scholar.google.com/citations?user=JjMvRJMAAAAJ"
   ];
@@ -101,13 +101,13 @@ function initScrollAnimations() {
     });
   }, observerOptions);
 
-  // Observe publication cards
-  const publicationCards = document.querySelectorAll('.publication-card');
-  publicationCards.forEach(card => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateX(-30px)';
-    card.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
-    observer.observe(card);
+  // Observe publication items for fade-in effect
+  const publicationItems = document.querySelectorAll('.publication-item');
+  publicationItems.forEach((item, index) => {
+    item.style.opacity = '0';
+    item.style.transform = 'translateX(-20px)';
+    item.style.transition = `opacity 0.6s ease-out ${index * 0.1}s, transform 0.6s ease-out ${index * 0.1}s`;
+    observer.observe(item);
   });
 }
 
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typewriterTextEl) {
     typewriterEffect(
       typewriterTextEl,
-      "PhD Student in Computer Science | Seeking Faculty Jobs | Terminal Access Granted",
+      "PhD Candidate in Computer Science | Terminal Access Granted",
       30
     );
   }

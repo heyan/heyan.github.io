@@ -142,20 +142,34 @@ body {
 
 @media (max-width: 1200px) {
   .layout-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
     gap: 2rem;
   }
   
   .section-divider {
     display: none !important;
-    visibility: hidden;
-    width: 0;
-    height: 0;
-    padding: 0;
-    margin: 0;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    opacity: 0 !important;
   }
   
   .divider-line {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  
+  .divider-line::before,
+  .divider-line::after {
     display: none !important;
   }
 }
@@ -163,20 +177,29 @@ body {
 @media (max-width: 768px) {
   .section-divider {
     display: none !important;
-    visibility: hidden;
-    width: 0;
-    height: 0;
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    opacity: 0;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    position: absolute !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
   }
   
   .divider-line {
     display: none !important;
-    visibility: hidden;
-    width: 0;
-    height: 0;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  
+  .divider-line::before,
+  .divider-line::after {
+    display: none !important;
   }
 }
 
@@ -208,6 +231,18 @@ body {
   padding: 2rem 0;
 }
 
+@media (max-width: 1200px) {
+  .section-divider {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+  }
+}
+
 .divider-line {
   width: 2px;
   height: 100%;
@@ -226,6 +261,18 @@ body {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1),
               inset -1px 0 4px rgba(255, 255, 255, 0.3),
               inset 1px 0 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1200px) {
+  .divider-line {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
 }
 
 .divider-line::before {

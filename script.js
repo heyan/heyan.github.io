@@ -16,19 +16,10 @@ function typewriterEffect(element, text, speed = 50, callback) {
   type();
 }
 
-// Command Cycling
+// Command Display - Single Command
 function initCommandCycling() {
-  const commands = [
-    "whoami",
-    "cat publications.txt",
-    "cat contact.txt"
-  ];
-
-  const commandOutputs = [
-    "heyan@ou.edu - PhD Candidate in Computer Science",
-    "NDSS 2026: PhantomMotion laser attacks\nRAID 2025: MotionDecipher VR inference\nIEEE TMC 2023: Camera localization\nCCS 2023: Free tier camera identification\nMobiSys 2021: MotionCompass camera pinpointing\nMASS 2020: Virtual Step PIN Pad foot-input authentication",
-    "Email: heyan@ou.edu\nLocation: University of Oklahoma, Norman, OK\nLinkedIn: linkedin.com/in/heyanok\nGoogle Scholar: scholar.google.com/citations?user=JjMvRJMAAAAJ"
-  ];
+  const command = "cat contact.txt";
+  const commandOutput = "Email: heyan@ou.edu\nLocation: University of Oklahoma, Norman, OK\nLinkedIn: linkedin.com/in/heyanok\nGoogle Scholar: scholar.google.com/citations?user=JjMvRJMAAAAJ";
 
   const commandTextEl = document.getElementById('command-text');
   const commandOutputEl = document.getElementById('command-output');
@@ -36,40 +27,30 @@ function initCommandCycling() {
 
   if (!commandTextEl || !commandOutputEl) return;
 
-  let currentCommand = 0;
-  let isTyping = false;
+  // Clear initial state
+  commandTextEl.textContent = '';
+  commandOutputEl.textContent = '';
 
-  function showCommand(index) {
-    if (isTyping) return;
-    isTyping = true;
+  // Type command
+  typewriterEffect(commandTextEl, command, 100, () => {
+    // Show output after command is typed
+    setTimeout(() => {
+      commandOutputEl.textContent = commandOutput;
+      // Hide cursor after output is shown
+      if (commandCursorEl) {
+        commandCursorEl.style.display = 'none';
+      }
+    }, 300);
+  });
 
-    // Clear previous
-    commandTextEl.textContent = '';
-    commandOutputEl.textContent = '';
-
-    // Type command
-    typewriterEffect(commandTextEl, commands[index], 100, () => {
-      // Show output after command is typed
-      setTimeout(() => {
-        commandOutputEl.textContent = commandOutputs[index];
-        isTyping = false;
-      }, 300);
-    });
-  }
-
-  // Show first command
-  showCommand(0);
-
-  // Cycle through commands
-  setInterval(() => {
-    currentCommand = (currentCommand + 1) % commands.length;
-    showCommand(currentCommand);
-  }, 4000);
-
-  // Cursor blink
+  // Cursor blink (only while typing)
   if (commandCursorEl) {
-    setInterval(() => {
-      commandCursorEl.style.opacity = commandCursorEl.style.opacity === '0' ? '1' : '0';
+    const cursorInterval = setInterval(() => {
+      if (commandTextEl.textContent.length < command.length) {
+        commandCursorEl.style.opacity = commandCursorEl.style.opacity === '0' ? '1' : '0';
+      } else {
+        clearInterval(cursorInterval);
+      }
     }, 500);
   }
 }

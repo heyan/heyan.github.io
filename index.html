@@ -18,9 +18,6 @@
             <div class="nav-logo">
                 root@yanhe:~$
             </div>
-            <div class="nav-links">
-                <button class="nav-link" onclick="scrollToSection('publications')">./publications</button>
-            </div>
         </div>
     </nav>
 
@@ -33,6 +30,17 @@
                     <h1 class="hero-title metal-text">YAN HE</h1>
                 <div class="hero-subtitle">
                     <span id="typewriter-text" class="typewriter-text"></span>
+                </div>
+                <!-- CV Download Button -->
+                <div class="cv-download-intro">
+                    <a href="cv.pdf" target="_blank" rel="noopener noreferrer" class="cv-button-intro metal-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                            <polyline points="15 3 21 3 21 9"/>
+                            <line x1="10" x2="21" y1="14" y2="3"/>
+                        </svg>
+                        <span class="cv-button-intro-text">See My CV</span>
+                    </a>
                 </div>
             </div>
 
@@ -54,9 +62,6 @@
                         <span id="command-cursor" class="terminal-cursor"></span>
                     </div>
                     <div id="command-output" class="command-output"></div>
-                    <div class="console-hint">
-                        [SYSTEM] Next command in 3s... | Press any key to interrupt
-                    </div>
                 </div>
             </div>
 
@@ -67,11 +72,9 @@
                 </div>
                 <div class="interests-compact-tags">
                     <span class="interest-compact-tag metal-tag">Cybersecurity</span>
-                    <span class="interest-compact-tag metal-tag">Network Security</span>
                     <span class="interest-compact-tag metal-tag">Embedded System</span>
                     <span class="interest-compact-tag metal-tag">Computer Vision</span>
                     <span class="interest-compact-tag metal-tag">Mobile Computing</span>
-                    <span class="interest-compact-tag metal-tag">AI</span>
                 </div>
             </div>
 
@@ -119,29 +122,23 @@
                     </svg>
                 </a>
             </div>
+
+            <!-- Copyright -->
+            <div class="intro-copyright">
+                <p>© 2024 Yan He. All rights reserved. | Built with HTML5, CSS3, and JavaScript.</p>
+            </div>
         </div>
+
+            <!-- Section Divider -->
+            <div class="section-divider">
+                <div class="divider-line"></div>
+            </div>
 
             <!-- Right Column: Publications Section -->
             <div class="publications-column" id="publications">
                 <div class="publications-header">
                     <h2 class="section-title metal-text">./publications</h2>
-                
-                <!-- CV Download Button -->
-                <div class="cv-download">
-                        <a href="cv.pdf" target="_blank" rel="noopener noreferrer" class="cv-button metal-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                            <polyline points="15 3 21 3 21 9"/>
-                            <line x1="10" x2="21" y1="14" y2="3"/>
-                        </svg>
-                        <div class="cv-button-text">
-                            <div class="cv-button-title">See My CV</div>
-                            <div class="cv-button-subtitle">Complete academic profile & research portfolio</div>
-                        </div>
-                        <div class="cv-button-indicator"></div>
-                    </a>
                 </div>
-            </div>
 
             <div class="publications-list">
                     <div class="console-window metal-border">
@@ -161,128 +158,170 @@
                         </div>
                         <div class="command-output publications-output">
                                 <div class="publication-item metal-pub-item">
-                                <div class="pub-header">
-                                    <span class="pub-status status-accepted">[ACCEPTED]</span>
-                                    <span class="pub-year">2026</span>
-                                    <span class="pub-venue">NDSS</span>
-                                    <span class="pub-type">Conference</span>
-                                </div>
-                                <div class="pub-title">PhantomMotion: Laser-Based Motion Injection Attacks on Wireless Security Surveillance Systems</div>
-                                <div class="pub-authors"><span class="author-highlight">Yan He</span>, Guanchong Huang, Song Fang</div>
-                                <div class="pub-link">
-                                    <span class="publication-link disabled">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                                            <polyline points="15 3 21 3 21 9"/>
-                                            <line x1="10" x2="21" y1="14" y2="3"/>
-                                        </svg>
-                                        <span>Show PDF (Pending)</span>
-                                    </span>
-                                </div>
-                            </div>
-
-                                <div class="publication-item metal-pub-item">
-                                <div class="pub-header">
-                                    <span class="pub-status status-accepted">[ACCEPTED]</span>
-                                    <span class="pub-year">2025</span>
-                                    <span class="pub-venue">RAID</span>
-                                    <span class="pub-type">Conference</span>
-                                </div>
-                                <div class="pub-title">MotionDecipher: General Video-assisted Passcode Inference In Virtual Reality</div>
-                                <div class="pub-authors">Guanchong Huang, <span class="author-highlight">Yan He</span>, Shangqing Zhao, Yi Wu, Song Fang</div>
-                                <div class="pub-link">
-                                        <a href="RAID25.pdf" target="_blank" rel="noopener noreferrer" class="publication-link metal-link">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                                            <polyline points="15 3 21 3 21 9"/>
-                                            <line x1="10" x2="21" y1="14" y2="3"/>
-                                        </svg>
-                                        <span>Show PDF</span>
-                                    </a>
+                                <div class="pub-content-wrapper">
+                                    <div class="pub-thumbnail">
+                                        <img src="NDSS.png" alt="NDSS 2026 Publication" class="pub-thumbnail-img">
+                                    </div>
+                                    <div class="pub-details">
+                                        <div class="pub-header">
+                                            <span class="pub-status status-accepted">[ACCEPTED]</span>
+                                            <span class="pub-year">2026</span>
+                                            <span class="pub-venue">NDSS</span>
+                                            <span class="pub-type">Conference</span>
+                                        </div>
+                                        <div class="pub-title">PhantomMotion: Laser-Based Motion Injection Attacks on Wireless Security Surveillance Systems</div>
+                                        <div class="pub-authors"><span class="author-highlight">Yan He</span>, Guanchong Huang, Song Fang</div>
+                                        <div class="pub-link">
+                                            <span class="publication-link disabled">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                    <polyline points="15 3 21 3 21 9"/>
+                                                    <line x1="10" x2="21" y1="14" y2="3"/>
+                                                </svg>
+                                                <span>Show PDF (Pending)</span>
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
                                 <div class="publication-item metal-pub-item">
-                                <div class="pub-header">
-                                    <span class="pub-status status-published">[PUBLISHED]</span>
-                                    <span class="pub-year">2023</span>
-                                    <span class="pub-venue">IEEE TMC</span>
-                                    <span class="pub-type">Journal</span>
-                                </div>
-                                <div class="pub-title">Precise wireless camera localization leveraging traffic-aided spatial analysis</div>
-                                <div class="pub-authors"><span class="author-highlight">Yan He</span>, Qiuye He, Song Fang, Yao Liu</div>
-                                <div class="pub-link">
-                                        <a href="TMC.pdf" target="_blank" rel="noopener noreferrer" class="publication-link metal-link">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                                            <polyline points="15 3 21 3 21 9"/>
-                                            <line x1="10" x2="21" y1="14" y2="3"/>
-                                        </svg>
-                                        <span>Show PDF</span>
-                                    </a>
-                                </div>
-                            </div>
-
-                                <div class="publication-item metal-pub-item">
-                                <div class="pub-header">
-                                    <span class="pub-status status-published">[PUBLISHED]</span>
-                                    <span class="pub-year">2023</span>
-                                    <span class="pub-venue">CCS</span>
-                                    <span class="pub-type">Conference</span>
-                                </div>
-                                <div class="pub-title">When free tier becomes free to enter: A non-intrusive way to identify security cameras with no cloud subscription</div>
-                                <div class="pub-authors"><span class="author-highlight">Yan He</span>, Qiuye He, Song Fang, Yao Liu</div>
-                                <div class="pub-link">
-                                        <a href="CCS.pdf" target="_blank" rel="noopener noreferrer" class="publication-link metal-link">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                                            <polyline points="15 3 21 3 21 9"/>
-                                            <line x1="10" x2="21" y1="14" y2="3"/>
-                                        </svg>
-                                        <span>Show PDF</span>
-                                    </a>
+                                <div class="pub-content-wrapper">
+                                    <div class="pub-thumbnail">
+                                        <img src="RAID25.png" alt="RAID 2025 Publication" class="pub-thumbnail-img">
+                                    </div>
+                                    <div class="pub-details">
+                                        <div class="pub-header">
+                                            <span class="pub-status status-published">[PUBLISHED]</span>
+                                            <span class="pub-year">2025</span>
+                                            <span class="pub-venue">RAID</span>
+                                            <span class="pub-type">Conference</span>
+                                        </div>
+                                        <div class="pub-title">MotionDecipher: General Video-assisted Passcode Inference In Virtual Reality</div>
+                                        <div class="pub-authors">Guanchong Huang, <span class="author-highlight">Yan He</span>, Shangqing Zhao, Yi Wu, Song Fang</div>
+                                        <div class="pub-link">
+                                            <a href="RAID25.pdf" target="_blank" rel="noopener noreferrer" class="publication-link metal-link">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                    <polyline points="15 3 21 3 21 9"/>
+                                                    <line x1="10" x2="21" y1="14" y2="3"/>
+                                                </svg>
+                                                <span>Show PDF</span>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
                                 <div class="publication-item metal-pub-item">
-                                <div class="pub-header">
-                                    <span class="pub-status status-published">[PUBLISHED]</span>
-                                    <span class="pub-year">2021</span>
-                                    <span class="pub-venue">MobiSys</span>
-                                    <span class="pub-type">Conference</span>
-                                </div>
-                                <div class="pub-title">Motioncompass: pinpointing wireless camera via motion-activated traffic</div>
-                                <div class="pub-authors"><span class="author-highlight">Yan He</span>, Qiuye He, Song Fang, Yao Liu</div>
-                                <div class="pub-link">
-                                        <a href="MobiSys.pdf" target="_blank" rel="noopener noreferrer" class="publication-link metal-link">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                                            <polyline points="15 3 21 3 21 9"/>
-                                            <line x1="10" x2="21" y1="14" y2="3"/>
-                                        </svg>
-                                        <span>Show PDF</span>
-                                    </a>
+                                <div class="pub-content-wrapper">
+                                    <div class="pub-thumbnail">
+                                        <img src="TMC.png" alt="IEEE TMC 2023 Publication" class="pub-thumbnail-img">
+                                    </div>
+                                    <div class="pub-details">
+                                        <div class="pub-header">
+                                            <span class="pub-status status-published">[PUBLISHED]</span>
+                                            <span class="pub-year">2023</span>
+                                            <span class="pub-venue">IEEE TMC</span>
+                                            <span class="pub-type">Journal</span>
+                                        </div>
+                                        <div class="pub-title">Precise wireless camera localization leveraging traffic-aided spatial analysis</div>
+                                        <div class="pub-authors"><span class="author-highlight">Yan He</span>, Qiuye He, Song Fang, Yao Liu</div>
+                                        <div class="pub-link">
+                                            <a href="TMC.pdf" target="_blank" rel="noopener noreferrer" class="publication-link metal-link">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                    <polyline points="15 3 21 3 21 9"/>
+                                                    <line x1="10" x2="21" y1="14" y2="3"/>
+                                                </svg>
+                                                <span>Show PDF</span>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
                                 <div class="publication-item metal-pub-item">
-                                <div class="pub-header">
-                                    <span class="pub-status status-published">[PUBLISHED]</span>
-                                    <span class="pub-year">2020</span>
-                                    <span class="pub-venue">MASS</span>
-                                    <span class="pub-type">Conference</span>
+                                <div class="pub-content-wrapper">
+                                    <div class="pub-thumbnail">
+                                        <img src="CCS.png" alt="CCS 2023 Publication" class="pub-thumbnail-img">
+                                    </div>
+                                    <div class="pub-details">
+                                        <div class="pub-header">
+                                            <span class="pub-status status-published">[PUBLISHED]</span>
+                                            <span class="pub-year">2023</span>
+                                            <span class="pub-venue">CCS</span>
+                                            <span class="pub-type">Conference</span>
+                                        </div>
+                                        <div class="pub-title">When free tier becomes free to enter: A non-intrusive way to identify security cameras with no cloud subscription</div>
+                                        <div class="pub-authors"><span class="author-highlight">Yan He</span>, Qiuye He, Song Fang, Yao Liu</div>
+                                        <div class="pub-link">
+                                            <a href="CCS.pdf" target="_blank" rel="noopener noreferrer" class="publication-link metal-link">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                    <polyline points="15 3 21 3 21 9"/>
+                                                    <line x1="10" x2="21" y1="14" y2="3"/>
+                                                </svg>
+                                                <span>Show PDF</span>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="pub-title">Virtual Step PIN Pad: Towards Foot-input Authentication Using Geophones</div>
-                                <div class="pub-authors"><span class="author-highlight">Yan He</span>, Qiuye He, Song Fang, Yao Liu</div>
-                                <div class="pub-link">
-                                        <a href="MASS.pdf" target="_blank" rel="noopener noreferrer" class="publication-link metal-link">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                                            <polyline points="15 3 21 3 21 9"/>
-                                            <line x1="10" x2="21" y1="14" y2="3"/>
-                                        </svg>
-                                        <span>Show PDF</span>
-                                    </a>
+                            </div>
+
+                                <div class="publication-item metal-pub-item">
+                                <div class="pub-content-wrapper">
+                                    <div class="pub-thumbnail">
+                                        <img src="MobiSys.png" alt="MobiSys 2021 Publication" class="pub-thumbnail-img">
+                                    </div>
+                                    <div class="pub-details">
+                                        <div class="pub-header">
+                                            <span class="pub-status status-published">[PUBLISHED]</span>
+                                            <span class="pub-year">2021</span>
+                                            <span class="pub-venue">MobiSys</span>
+                                            <span class="pub-type">Conference</span>
+                                        </div>
+                                        <div class="pub-title">Motioncompass: pinpointing wireless camera via motion-activated traffic</div>
+                                        <div class="pub-authors"><span class="author-highlight">Yan He</span>, Qiuye He, Song Fang, Yao Liu</div>
+                                        <div class="pub-link">
+                                            <a href="MobiSys.pdf" target="_blank" rel="noopener noreferrer" class="publication-link metal-link">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                    <polyline points="15 3 21 3 21 9"/>
+                                                    <line x1="10" x2="21" y1="14" y2="3"/>
+                                                </svg>
+                                                <span>Show PDF</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                                <div class="publication-item metal-pub-item">
+                                <div class="pub-content-wrapper">
+                                    <div class="pub-thumbnail">
+                                        <img src="MASS.png" alt="MASS 2020 Publication" class="pub-thumbnail-img">
+                                    </div>
+                                    <div class="pub-details">
+                                        <div class="pub-header">
+                                            <span class="pub-status status-published">[PUBLISHED]</span>
+                                            <span class="pub-year">2020</span>
+                                            <span class="pub-venue">MASS</span>
+                                            <span class="pub-type">Conference</span>
+                                        </div>
+                                        <div class="pub-title">Virtual Step PIN Pad: Towards Foot-input Authentication Using Geophones</div>
+                                        <div class="pub-authors"><span class="author-highlight">Yan He</span>, Hanyan Zhang, Edwin Yang, Song Fang</div>
+                                        <div class="pub-link">
+                                            <a href="MASS.pdf" target="_blank" rel="noopener noreferrer" class="publication-link metal-link">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                    <polyline points="15 3 21 3 21 9"/>
+                                                    <line x1="10" x2="21" y1="14" y2="3"/>
+                                                </svg>
+                                                <span>Show PDF</span>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             </div>
@@ -292,43 +331,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-title">YAN HE</div>
-                <p class="footer-description">
-                    PhD Candidate & Research Enthusiast | Terminal Access Granted | System Online
-                </p>
-                <div class="footer-social">
-                    <a href="mailto:heyan@ou.edu" class="footer-social-link" aria-label="Email">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect width="20" height="16" x="2" y="4" rx="2"/>
-                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-                        </svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/heyanok/" class="footer-social-link" aria-label="LinkedIn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                            <rect width="4" height="12" x="2" y="9"/>
-                            <circle cx="4" cy="4" r="2"/>
-                        </svg>
-                    </a>
-                    <a href="https://scholar.google.com/citations?user=JjMvRJMAAAAJ" class="footer-social-link" aria-label="Google Scholar">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"/>
-                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
-                            <path d="M2 12h20"/>
-                        </svg>
-                    </a>
-                </div>
-                <p class="footer-copyright">
-                    © 2024 Yan He. All rights reserved. | Built with HTML5, CSS3, and JavaScript.
-                </p>
-            </div>
-        </div>
-    </footer>
 
     <script src="script.js"></script>
 </body>

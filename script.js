@@ -69,15 +69,15 @@ window.scrollToSection = scrollToSection;
 // Intersection Observer for animations
 function initScrollAnimations() {
   const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    threshold: 0.01,
+    rootMargin: '100px 0px 100px 0px'
   };
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
+        entry.target.style.transform = 'translateX(0)';
       }
     });
   }, observerOptions);
@@ -85,9 +85,20 @@ function initScrollAnimations() {
   // Observe publication items for fade-in effect
   const publicationItems = document.querySelectorAll('.publication-item');
   publicationItems.forEach((item, index) => {
+    // Set initial state but ensure visibility fallback
     item.style.opacity = '0';
     item.style.transform = 'translateX(-20px)';
-    item.style.transition = `opacity 0.6s ease-out ${index * 0.1}s, transform 0.6s ease-out ${index * 0.1}s`;
+    item.style.transition = `opacity 0.4s ease-out ${index * 0.05}s, transform 0.4s ease-out ${index * 0.05}s`;
+    item.style.willChange = 'opacity, transform';
+    
+    // Fallback: make visible after a delay if observer doesn't trigger
+    setTimeout(() => {
+      if (item.style.opacity === '0') {
+        item.style.opacity = '1';
+        item.style.transform = 'translateX(0)';
+      }
+    }, 1000 + (index * 100));
+    
     observer.observe(item);
   });
 }

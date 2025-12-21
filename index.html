@@ -20,23 +20,24 @@
             </div>
             <div class="nav-links">
                 <button class="nav-link" onclick="scrollToSection('publications')">./publications</button>
-                <button class="nav-link" onclick="scrollToSection('contact')">./contact</button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container">
+    <!-- Main Two-Column Layout -->
+    <section class="main-layout">
+        <div class="layout-container">
+            <!-- Left Column: Intro Section -->
+            <div class="intro-column">
             <div class="hero-content">
-                <h1 class="hero-title">YAN HE</h1>
+                    <h1 class="hero-title metal-text">YAN HE</h1>
                 <div class="hero-subtitle">
                     <span id="typewriter-text" class="typewriter-text"></span>
                 </div>
             </div>
 
             <!-- Main Console Window -->
-            <div class="console-window mb-8">
+                <div class="console-window mb-8 metal-border">
                 <div class="console-header">
                     <div class="console-buttons">
                         <div class="console-button red"></div>
@@ -59,56 +60,31 @@
                 </div>
             </div>
 
-            <!-- Research Interests Bar -->
-            <div class="console-window research-interests">
-                <div class="console-header">
-                    <div class="console-buttons">
-                        <div class="console-button red"></div>
-                        <div class="console-button yellow"></div>
-                        <div class="console-button green"></div>
-                    </div>
-                    <div class="console-title">RESEARCH_INTERESTS</div>
-                    <div class="console-prompt">root@yanhe:~$</div>
+            <!-- Research Interests - Compact & Noticeable -->
+            <div class="research-interests-compact">
+                <div class="interests-compact-label">
+                    <span class="text-accent">RESEARCH INTERESTS:</span>
                 </div>
-                <div class="console-content">
-                    <div class="console-line">
-                        <span class="terminal-prompt">root@yanhe:~$</span>
-                        <span>cat research_interests.txt</span>
-                    </div>
-                    <div class="command-output">
-                        <div class="interests-label">
-                            <span class="text-accent">INTERESTS:</span>
-                        </div>
-                        <div class="interests-tags">
-                            <span class="interest-tag">AIoT</span>
-                            <span class="interest-tag">Embedded System</span>
-                            <span class="interest-tag">Computer Vision</span>
-                            <span class="interest-tag">Security and Privacy</span>
-                        </div>
-                    </div>
+                <div class="interests-compact-tags">
+                    <span class="interest-compact-tag metal-tag">Cybersecurity</span>
+                    <span class="interest-compact-tag metal-tag">Network Security</span>
+                    <span class="interest-compact-tag metal-tag">Embedded System</span>
+                    <span class="interest-compact-tag metal-tag">Computer Vision</span>
+                    <span class="interest-compact-tag metal-tag">Mobile Computing</span>
+                    <span class="interest-compact-tag metal-tag">AI</span>
                 </div>
             </div>
 
             <!-- Quick Stats -->
             <div class="stats-grid">
-                <div class="stat-card">
+                <div class="stat-card metal-card">
                     <svg class="stat-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
                     </svg>
                     <div class="stat-value text-green">7</div>
                     <div class="stat-label">Publications</div>
                 </div>
-                <div class="stat-card">
-                    <svg class="stat-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
-                        <line x1="16" x2="16" y1="2" y2="6"/>
-                        <line x1="8" x2="8" y1="2" y2="6"/>
-                        <line x1="3" x2="21" y1="10" y2="10"/>
-                    </svg>
-                    <div class="stat-value text-blue">3</div>
-                    <div class="stat-label">PhD Years</div>
-                </div>
-                <div class="stat-card">
+                <div class="stat-card metal-card">
                     <svg class="stat-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
                         <circle cx="9" cy="7" r="4"/>
@@ -118,29 +94,24 @@
                     <div class="stat-value text-yellow">6</div>
                     <div class="stat-label">Teaching Assistants Served</div>
                 </div>
-                <div class="stat-card">
-                    <span class="stat-emoji">🐟</span>
-                    <div class="stat-value text-purple">95</div>
-                    <div class="stat-label">Fish Caught</div>
-                </div>
             </div>
 
             <!-- Social Links -->
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/heyanok/" class="social-link" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/heyanok/" class="social-link metal-social" aria-label="LinkedIn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
                         <rect width="4" height="12" x="2" y="9"/>
                         <circle cx="4" cy="4" r="2"/>
                     </svg>
                 </a>
-                <a href="mailto:heyan@ou.edu" class="social-link" aria-label="Email">
+                    <a href="mailto:heyan@ou.edu" class="social-link metal-social" aria-label="Email">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <rect width="20" height="16" x="2" y="4" rx="2"/>
                         <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
                     </svg>
                 </a>
-                <a href="https://scholar.google.com/citations?user=JjMvRJMAAAAJ" class="social-link" aria-label="Google Scholar">
+                    <a href="https://scholar.google.com/citations?user=JjMvRJMAAAAJ" class="social-link metal-social" aria-label="Google Scholar">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="12" cy="12" r="10"/>
                         <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
@@ -149,20 +120,15 @@
                 </a>
             </div>
         </div>
-    </section>
 
-    <!-- Publications Section -->
-    <section id="publications" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">./publications</h2>
-                <p class="section-description">
-                    [SYSTEM] Accessing academic database... | Loading publication records...
-                </p>
+            <!-- Right Column: Publications Section -->
+            <div class="publications-column" id="publications">
+                <div class="publications-header">
+                    <h2 class="section-title metal-text">./publications</h2>
                 
                 <!-- CV Download Button -->
                 <div class="cv-download">
-                    <a href="cv.pdf" target="_blank" rel="noopener noreferrer" class="cv-button">
+                        <a href="cv.pdf" target="_blank" rel="noopener noreferrer" class="cv-button metal-button">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
                             <polyline points="15 3 21 3 21 9"/>
@@ -178,7 +144,7 @@
             </div>
 
             <div class="publications-list">
-                <div class="console-window">
+                    <div class="console-window metal-border">
                     <div class="console-header">
                         <div class="console-buttons">
                             <div class="console-button red"></div>
@@ -194,7 +160,7 @@
                             <span>ls -la publications/</span>
                         </div>
                         <div class="command-output publications-output">
-                            <div class="publication-item">
+                                <div class="publication-item metal-pub-item">
                                 <div class="pub-header">
                                     <span class="pub-status status-accepted">[ACCEPTED]</span>
                                     <span class="pub-year">2026</span>
@@ -215,7 +181,7 @@
                                 </div>
                             </div>
 
-                            <div class="publication-item">
+                                <div class="publication-item metal-pub-item">
                                 <div class="pub-header">
                                     <span class="pub-status status-accepted">[ACCEPTED]</span>
                                     <span class="pub-year">2025</span>
@@ -225,7 +191,7 @@
                                 <div class="pub-title">MotionDecipher: General Video-assisted Passcode Inference In Virtual Reality</div>
                                 <div class="pub-authors">Guanchong Huang, <span class="author-highlight">Yan He</span>, Shangqing Zhao, Yi Wu, Song Fang</div>
                                 <div class="pub-link">
-                                    <a href="RAID25.pdf" target="_blank" rel="noopener noreferrer" class="publication-link">
+                                        <a href="RAID25.pdf" target="_blank" rel="noopener noreferrer" class="publication-link metal-link">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
                                             <polyline points="15 3 21 3 21 9"/>
@@ -236,7 +202,7 @@
                                 </div>
                             </div>
 
-                            <div class="publication-item">
+                                <div class="publication-item metal-pub-item">
                                 <div class="pub-header">
                                     <span class="pub-status status-published">[PUBLISHED]</span>
                                     <span class="pub-year">2023</span>
@@ -246,7 +212,7 @@
                                 <div class="pub-title">Precise wireless camera localization leveraging traffic-aided spatial analysis</div>
                                 <div class="pub-authors"><span class="author-highlight">Yan He</span>, Qiuye He, Song Fang, Yao Liu</div>
                                 <div class="pub-link">
-                                    <a href="TMC.pdf" target="_blank" rel="noopener noreferrer" class="publication-link">
+                                        <a href="TMC.pdf" target="_blank" rel="noopener noreferrer" class="publication-link metal-link">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
                                             <polyline points="15 3 21 3 21 9"/>
@@ -257,7 +223,7 @@
                                 </div>
                             </div>
 
-                            <div class="publication-item">
+                                <div class="publication-item metal-pub-item">
                                 <div class="pub-header">
                                     <span class="pub-status status-published">[PUBLISHED]</span>
                                     <span class="pub-year">2023</span>
@@ -267,7 +233,7 @@
                                 <div class="pub-title">When free tier becomes free to enter: A non-intrusive way to identify security cameras with no cloud subscription</div>
                                 <div class="pub-authors"><span class="author-highlight">Yan He</span>, Qiuye He, Song Fang, Yao Liu</div>
                                 <div class="pub-link">
-                                    <a href="CCS.pdf" target="_blank" rel="noopener noreferrer" class="publication-link">
+                                        <a href="CCS.pdf" target="_blank" rel="noopener noreferrer" class="publication-link metal-link">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
                                             <polyline points="15 3 21 3 21 9"/>
@@ -278,7 +244,7 @@
                                 </div>
                             </div>
 
-                            <div class="publication-item">
+                                <div class="publication-item metal-pub-item">
                                 <div class="pub-header">
                                     <span class="pub-status status-published">[PUBLISHED]</span>
                                     <span class="pub-year">2021</span>
@@ -288,7 +254,7 @@
                                 <div class="pub-title">Motioncompass: pinpointing wireless camera via motion-activated traffic</div>
                                 <div class="pub-authors"><span class="author-highlight">Yan He</span>, Qiuye He, Song Fang, Yao Liu</div>
                                 <div class="pub-link">
-                                    <a href="MobiSys.pdf" target="_blank" rel="noopener noreferrer" class="publication-link">
+                                        <a href="MobiSys.pdf" target="_blank" rel="noopener noreferrer" class="publication-link metal-link">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
                                             <polyline points="15 3 21 3 21 9"/>
@@ -299,7 +265,7 @@
                                 </div>
                             </div>
 
-                            <div class="publication-item">
+                                <div class="publication-item metal-pub-item">
                                 <div class="pub-header">
                                     <span class="pub-status status-published">[PUBLISHED]</span>
                                     <span class="pub-year">2020</span>
@@ -309,7 +275,7 @@
                                 <div class="pub-title">Virtual Step PIN Pad: Towards Foot-input Authentication Using Geophones</div>
                                 <div class="pub-authors"><span class="author-highlight">Yan He</span>, Qiuye He, Song Fang, Yao Liu</div>
                                 <div class="pub-link">
-                                    <a href="MASS.pdf" target="_blank" rel="noopener noreferrer" class="publication-link">
+                                        <a href="MASS.pdf" target="_blank" rel="noopener noreferrer" class="publication-link metal-link">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
                                             <polyline points="15 3 21 3 21 9"/>
@@ -319,151 +285,6 @@
                                     </a>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">./contact</h2>
-                <p class="section-description">
-                    [SYSTEM] Establishing secure connection... | Contact protocols initialized...
-                </p>
-            </div>
-
-            <div class="contact-grid">
-                <div class="console-window">
-                    <div class="console-header">
-                        <div class="console-buttons">
-                            <div class="console-button red"></div>
-                            <div class="console-button yellow"></div>
-                            <div class="console-button green"></div>
-                        </div>
-                        <div class="console-title">CONTACT_INFO</div>
-                        <div class="console-prompt">root@yanhe:~$</div>
-                    </div>
-                    <div class="console-content">
-                        <div class="console-line">
-                            <span class="terminal-prompt">root@yanhe:~$</span>
-                            <span>cat contact.txt</span>
-                        </div>
-                        <div class="command-output">
-                            <div class="contact-field">
-                                <span class="text-accent">EMAIL:</span> heyan@ou.edu
-                            </div>
-                            <div class="contact-field">
-                                <span class="text-accent">LOCATION:</span> University of Oklahoma, Norman, OK
-                            </div>
-                            <div class="contact-field">
-                                <span class="text-accent">STATUS:</span> PhD Candidate
-                            </div>
-                            <div class="contact-field">
-                                <span class="text-accent">INTERESTS:</span> AIoT, Embedded System, Computer Vision and Security and Privacy
-                            </div>
-                            <div class="contact-field">
-                                <span class="text-accent">RESPONSE_TIME:</span> Usually within 24 hours
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact-sidebar">
-                    <div class="console-window">
-                        <div class="console-header">
-                            <div class="console-buttons">
-                                <div class="console-button red"></div>
-                                <div class="console-button yellow"></div>
-                                <div class="console-button green"></div>
-                            </div>
-                            <div class="console-title">SOCIAL_LINKS</div>
-                            <div class="console-prompt">root@yanhe:~$</div>
-                        </div>
-                        <div class="console-content">
-                            <div class="console-line">
-                                <span class="terminal-prompt">root@yanhe:~$</span>
-                                <span>ls social/</span>
-                            </div>
-                            <div class="command-output">
-                                <div class="social-item">
-                                    <div class="social-item-left">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <rect width="20" height="16" x="2" y="4" rx="2"/>
-                                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-                                        </svg>
-                                        <span>Email:</span>
-                                    </div>
-                                    <a href="mailto:heyan@ou.edu" class="social-link-text">heyan@ou.edu</a>
-                                </div>
-                                <div class="social-item">
-                                    <div class="social-item-left">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                                            <rect width="4" height="12" x="2" y="9"/>
-                                            <circle cx="4" cy="4" r="2"/>
-                                        </svg>
-                                        <span>LinkedIn:</span>
-                                    </div>
-                                    <a href="https://www.linkedin.com/in/heyanok/" class="social-link-text">linkedin.com/in/heyanok</a>
-                                </div>
-                                <div class="social-item">
-                                    <div class="social-item-left">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <circle cx="12" cy="12" r="10"/>
-                                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
-                                            <path d="M2 12h20"/>
-                                        </svg>
-                                        <span>Google Scholar:</span>
-                                    </div>
-                                    <a href="https://scholar.google.com/citations?user=JjMvRJMAAAAJ" class="social-link-text">scholar.google.com/citations?user=JjMvRJMAAAAJ</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="console-window">
-                        <div class="console-header">
-                            <div class="console-buttons">
-                                <div class="console-button red"></div>
-                                <div class="console-button yellow"></div>
-                                <div class="console-button green"></div>
-                            </div>
-                            <div class="console-title">QUICK_ACTIONS</div>
-                            <div class="console-prompt">root@yanhe:~$</div>
-                        </div>
-                        <div class="console-content">
-                            <div class="console-line">
-                                <span class="terminal-prompt">root@yanhe:~$</span>
-                                <span>./contact_actions.sh</span>
-                            </div>
-                            <div class="command-output">
-                                <a href="mailto:heyan@ou.edu" class="action-link">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <rect width="20" height="16" x="2" y="4" rx="2"/>
-                                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-                                    </svg>
-                                    <span>Send Email</span>
-                                </a>
-                                <a href="https://www.linkedin.com/in/heyanok/" class="action-link">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                                        <rect width="4" height="12" x="2" y="9"/>
-                                        <circle cx="4" cy="4" r="2"/>
-                                    </svg>
-                                    <span>Connect on LinkedIn</span>
-                                </a>
-                                <a href="https://scholar.google.com/citations?user=JjMvRJMAAAAJ" class="action-link">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <circle cx="12" cy="12" r="10"/>
-                                        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
-                                        <path d="M2 12h20"/>
-                                    </svg>
-                                    <span>View Google Scholar</span>
-                                </a>
                             </div>
                         </div>
                     </div>
@@ -512,4 +333,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-

@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typewriterTextEl) {
     typewriterEffect(
       typewriterTextEl,
-      "PhD Candidate in Computer Science | Terminal Access Granted",
+      "PhD Candidate in Computer Science",
       30
     );
   }

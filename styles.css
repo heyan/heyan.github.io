@@ -195,9 +195,17 @@ body {
 
 .chips {
   display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 12px 0 4px;
+}
+
+.chips-title { margin: 0; }
+
+.chip-row {
+  display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  margin: 12px 0 4px;
 }
 
 .chip {
@@ -290,6 +298,22 @@ body {
 }
 
 .terminal-input:focus { border-color: #c7d2fe; box-shadow: 0 0 0 2px rgba(199, 210, 254, 0.6); }
+
+.bio-card h2 { margin: 6px 0 10px; }
+
+.bio-text { font-size: 1rem; line-height: 1.7; }
+
+.mini-bio {
+  padding: 12px 14px;
+  margin: 10px 0 12px;
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+
+.mini-bio .eyebrow { margin-bottom: 6px; display: inline-block; }
+
+.mini-bio .bio-text { margin: 0; font-size: 0.98rem; }
 
 .timeline h3 { margin: 0; font-size: 1rem; }
 

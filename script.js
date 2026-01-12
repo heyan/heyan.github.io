@@ -1,137 +1,256 @@
-// Typewriter Effect
-function typewriterEffect(element, text, speed = 50, callback) {
-  let index = 0;
-  element.textContent = '';
-
-  function type() {
-    if (index < text.length) {
-      element.textContent += text.charAt(index);
-      index++;
+// Simple typewriter effect (kept for potential reuse)
+function typewriterEffect(el, text, speed = 45, done) {
+  if (!el) return;
+  let i = 0;
+  el.textContent = '';
+  (function type() {
+    if (i < text.length) {
+      el.textContent += text.charAt(i);
+      i++;
       setTimeout(type, speed);
-    } else if (callback) {
-      callback();
+    } else if (done) {
+      done();
+    }
+  })();
+}
+
+const CONTACT = {
+  email: 'heyan@ou.edu',
+  location: 'University of Oklahoma, Norman, OK',
+  linkedin: 'https://www.linkedin.com/in/heyanok/',
+  scholar: 'https://scholar.google.com/citations?user=JjMvRJMAAAAJ'
+};
+
+const PUBLICATIONS = [
+  {
+    key: 'ndss2026',
+    title: 'PhantomMotion: Laser-Based Motion Injection Attacks on Wireless Security Surveillance Systems',
+    venue: 'NDSS 2026 (San Diego)',
+    status: 'Accepted',
+    pdf: null,
+    note: 'Laser-based motion injection attacks on wireless security surveillance systems.'
+  },
+  {
+    key: 'raid2025',
+    title: 'MotionDecipher: General Video-assisted Passcode Inference In Virtual Reality',
+    venue: 'RAID 2025',
+    status: 'Published',
+    pdf: 'RAID25.pdf'
+  },
+  {
+    key: 'tmc2023',
+    title: 'Precise wireless camera localization leveraging traffic-aided spatial analysis',
+    venue: 'IEEE TMC 2023',
+    status: 'Published',
+    pdf: 'TMC.pdf'
+  },
+  {
+    key: 'ccs2023',
+    title: 'When free tier becomes free to enter: Identifying security cameras with no cloud subscription',
+    venue: 'CCS 2023',
+    status: 'Published',
+    pdf: 'CCS.pdf'
+  },
+  {
+    key: 'mobisys2021',
+    title: 'MotionCompass: Pinpointing wireless cameras via motion-activated traffic',
+    venue: 'MobiSys 2021',
+    status: 'Published',
+    pdf: 'MobiSys.pdf'
+  },
+  {
+    key: 'mass2020',
+    title: 'Virtual Step PIN Pad: Towards foot-input authentication using geophones',
+    venue: 'MASS 2020',
+    status: 'Published',
+    pdf: 'MASS.pdf'
+  }
+];
+
+const COURSES = [
+  'Embedded Systems',
+  'Operating Systems',
+  'Computer Security',
+  'Machine Learning',
+  'Database Management',
+  'Computer Organization'
+];
+
+function appendLine(container, text, className) {
+  const line = document.createElement('div');
+  line.className = className ? `terminal-line ${className}` : 'terminal-line';
+  line.textContent = text;
+  container.appendChild(line);
+  container.scrollTop = container.scrollHeight;
+}
+
+function publicationLines() {
+  return PUBLICATIONS.map(p => {
+    const pdfPart = p.pdf ? `pdf: ${p.pdf}` : 'pdf pending';
+    return `${p.title} — ${p.venue} (${p.status}) [${pdfPart}] [key: ${p.key}]`;
+  });
+}
+
+function formatPublicationDetail(key) {
+  const pub = PUBLICATIONS.find(p => p.key === key.toLowerCase());
+  if (!pub) return `No publication found for key '${key}'. Try 'publications' to see keys.`;
+  const link = pub.pdf ? `Link: ${pub.pdf}` : 'Link: pending';
+  const note = pub.note ? `Note: ${pub.note}` : '';
+  return `${pub.title}\n${pub.venue} — ${pub.status}\n${link}${note ? `\n${note}` : ''}`;
+}
+
+function appendContactLines(outputEl) {
+  appendLine(outputEl, `Email: ${CONTACT.email}`);
+  appendLine(outputEl, `Location: ${CONTACT.location}`);
+  appendLine(outputEl, `LinkedIn: linkedin.com/in/heyanok`);
+  appendLine(outputEl, 'Google Scholar: scholar.google.com/citations?user=JjMvRJMAAAAJ');
+}
+
+function initTerminal() {
+  const outputEl = document.getElementById('terminal-output');
+  const form = document.getElementById('terminal-form');
+  const input = document.getElementById('terminal-input');
+  if (!outputEl || !form || !input) return;
+
+  const helpText = [
+    "help                show available commands",
+    "about               brief bio",
+    "contact             email, location, LinkedIn, Scholar",
+    "cat contact.txt     print contact info",
+    "email               print email",
+    "linkedin            print LinkedIn profile",
+    "scholar             print Google Scholar",
+    "location            print location",
+    "publications        list all publications (keys)",
+    "pub <key>           details for a publication",
+    "courses             list courses assisted",
+    "cv                  link to CV",
+    "clear               clear the terminal"
+  ];
+
+  function runCommand(raw) {
+    const cmd = raw.trim();
+    if (!cmd) {
+  appendLine(outputEl, "Welcome to my page! Type 'help' to explore this cute terminal.");
+
+    return;
+
+    }
+    appendLine(outputEl, `$ ${cmd}`, 'user');
+
+    const [base, ...rest] = cmd.split(/\s+/);
+    const arg = rest.join(' ');
+
+    switch (base.toLowerCase()) {
+      case 'help':
+        helpText.forEach(line => appendLine(outputEl, line));
+        break;
+      case 'about':
+        appendLine(outputEl, 'Yan He — PhD candidate focusing on cybersecurity, cyber-physical systems, and computer vision.');
+        break;
+      case 'contact':
+        appendContactLines(outputEl);
+        break;
+      case 'cat':
+        if (arg.toLowerCase() === 'contact.txt') {
+          appendContactLines(outputEl);
+        } else {
+          appendLine(outputEl, "Usage: cat contact.txt");
+        }
+        break;
+      case 'email':
+        appendLine(outputEl, CONTACT.email);
+        break;
+      case 'linkedin':
+        appendLine(outputEl, CONTACT.linkedin);
+        break;
+      case 'scholar':
+        appendLine(outputEl, CONTACT.scholar);
+        break;
+      case 'location':
+        appendLine(outputEl, CONTACT.location);
+        break;
+      case 'publications':
+        publicationLines().forEach(line => appendLine(outputEl, line));
+        break;
+      case 'pub':
+        if (!arg) {
+          appendLine(outputEl, "Usage: pub <key>. Run 'publications' to see keys.");
+        } else {
+          const pub = PUBLICATIONS.find(p => p.key === arg.toLowerCase());
+          if (!pub) {
+            appendLine(outputEl, `No publication found for key '${arg}'. Try 'publications' to see keys.`);
+          } else {
+            appendLine(outputEl, formatPublicationDetail(arg));
+            if (pub.pdf) {
+              appendLine(outputEl, `Opening ${pub.pdf}`);
+              window.open(pub.pdf, '_blank');
+            }
+          }
+        }
+        break;
+      case 'courses':
+        COURSES.forEach(c => appendLine(outputEl, c));
+        break;
+      case 'cv':
+        appendLine(outputEl, 'Opening CV: cv.pdf');
+        window.location.href = 'cv.pdf';
+        break;
+      case 'clear':
+        outputEl.innerHTML = '';
+        break;
+      default:
+        appendLine(outputEl, `Command not found: ${base}. Try 'help'.`);
     }
   }
 
-  type();
-}
+  appendLine(outputEl, "Welcome to my page! Type 'help' to explore this cute terminal.");
 
-// Command Display - Single Command
-function initCommandCycling() {
-  const command = "cat contact.txt";
-  const commandOutput = "Email: heyan@ou.edu\nLocation: University of Oklahoma, Norman, OK\nLinkedIn: linkedin.com/in/heyanok\nGoogle Scholar: scholar.google.com/citations?user=JjMvRJMAAAAJ";
-
-  const commandTextEl = document.getElementById('command-text');
-  const commandOutputEl = document.getElementById('command-output');
-  const commandCursorEl = document.getElementById('command-cursor');
-
-  if (!commandTextEl || !commandOutputEl) return;
-
-  // Clear initial state
-  commandTextEl.textContent = '';
-  commandOutputEl.textContent = '';
-
-  // Type command
-  typewriterEffect(commandTextEl, command, 100, () => {
-    // Show output after command is typed
-    setTimeout(() => {
-      commandOutputEl.textContent = commandOutput;
-      // Hide cursor after output is shown
-      if (commandCursorEl) {
-        commandCursorEl.style.display = 'none';
-      }
-    }, 300);
-  });
-
-  // Cursor blink (only while typing)
-  if (commandCursorEl) {
-    const cursorInterval = setInterval(() => {
-      if (commandTextEl.textContent.length < command.length) {
-        commandCursorEl.style.opacity = commandCursorEl.style.opacity === '0' ? '1' : '0';
-      } else {
-        clearInterval(cursorInterval);
-      }
-    }, 500);
-  }
-}
-
-// Smooth Scroll
-function scrollToSection(sectionId) {
-  const section = document.getElementById(sectionId);
-  if (section) {
-    section.scrollIntoView({ behavior: 'smooth' });
-  }
-}
-
-// Make scrollToSection available globally
-window.scrollToSection = scrollToSection;
-
-// Intersection Observer for animations
-function initScrollAnimations() {
-  const observerOptions = {
-    threshold: 0.01,
-    rootMargin: '100px 0px 100px 0px'
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateX(0)';
-      }
-    });
-  }, observerOptions);
-
-  // Observe publication items for fade-in effect
-  const publicationItems = document.querySelectorAll('.publication-item');
-  publicationItems.forEach((item, index) => {
-    // Set initial state but ensure visibility fallback
-    item.style.opacity = '0';
-    item.style.transform = 'translateX(-20px)';
-    item.style.transition = `opacity 0.4s ease-out ${index * 0.05}s, transform 0.4s ease-out ${index * 0.05}s`;
-    item.style.willChange = 'opacity, transform';
-    
-    // Fallback: make visible after a delay if observer doesn't trigger
-    setTimeout(() => {
-      if (item.style.opacity === '0') {
-        item.style.opacity = '1';
-        item.style.transform = 'translateX(0)';
-      }
-    }, 1000 + (index * 100));
-    
-    observer.observe(item);
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const value = input.value.slice(0, 120);
+    runCommand(value);
+    input.value = '';
   });
 }
 
-// Initialize everything when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-  // Matrix Rain disabled for better visibility
-
-  // Initialize Typewriter for hero subtitle
-  const typewriterTextEl = document.getElementById('typewriter-text');
-  if (typewriterTextEl) {
-    typewriterEffect(
-      typewriterTextEl,
-      "PhD Candidate in Computer Science",
-      30
-    );
-  }
-
-  // Initialize Command Cycling
-  initCommandCycling();
-
-  // Initialize Scroll Animations
-  initScrollAnimations();
-
-  // Add smooth scroll behavior to all anchor links
+function initSmoothAnchors() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
+    anchor.addEventListener('click', e => {
+      const targetId = anchor.getAttribute('href').slice(1);
+      const target = document.getElementById(targetId);
       if (target) {
+        e.preventDefault();
         target.scrollIntoView({ behavior: 'smooth' });
       }
     });
   });
+}
+
+function initHeroType() {
+  const el = document.getElementById('hero-type');
+  typewriterEffect(el, '');
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  initHeroType();
+  initTerminal();
+  initSmoothAnchors();
+  initReveal();
 });
 
+function initReveal() {
+  const elements = document.querySelectorAll('.reveal');
+  if (!elements.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  elements.forEach(el => observer.observe(el));
+}

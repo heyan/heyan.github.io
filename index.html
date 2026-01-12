@@ -1,337 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal homepage of Yan He, a PhD Candidate in Computer Science showcasing research, publications, and academic journey.">
-    <meta name="keywords" content="PhD, research, academic, Yan He, graduate student, Computer Science">
-    <title>Yan He - PhD Candidate in Computer Science</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yan He's personal site showcasing research, publications, and contact information.">
+  <title>Yan He | Research & Publications</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Console Navigation -->
-    <nav class="nav-bar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                root@yanhe:~$
-            </div>
+  <header class="nav-shell">
+    <div class="nav">
+      <div class="nav-brand">yan he</div>
+      <nav class="nav-links">
+        <a href="#about" class="nav-link">About</a>
+         <a href="#publications" class="nav-link">Publications</a>
+         <a href="#courses" class="nav-link">Courses</a>
+         <a href="#contact" class="nav-link">Contact</a>
+
+        <a href="cv.pdf" class="nav-cta" target="_blank" rel="noopener noreferrer">CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <section id="about" class="section hero reveal">
+      <div class="hero-text">
+        <p class="eyebrow">PhD Candidate · Computer Science</p>
+        <div class="hero-header">
+          <div class="avatar">
+            <img src="my.jpg" alt="Photo of Yan He" loading="lazy">
+          </div>
+          <h1>Yan He</h1>
         </div>
-    </nav>
-
-    <!-- Main Two-Column Layout -->
-    <section class="main-layout">
-        <div class="layout-container">
-            <!-- Left Column: Intro Section -->
-            <div class="intro-column">
-            <div class="hero-content">
-                    <h1 class="hero-title metal-text">YAN HE</h1>
-                <div class="hero-subtitle">
-                    <span id="typewriter-text" class="typewriter-text"></span>
-                </div>
-                <!-- CV Download Button -->
-                <div class="cv-download-intro">
-                    <a href="cv.pdf" target="_blank" rel="noopener noreferrer" class="cv-button-intro metal-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                            <polyline points="15 3 21 3 21 9"/>
-                            <line x1="10" x2="21" y1="14" y2="3"/>
-                        </svg>
-                        <span class="cv-button-intro-text">See My CV</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Main Console Window -->
-                <div class="console-window mb-8 metal-border">
-                <div class="console-header">
-                    <div class="console-buttons">
-                        <div class="console-button red"></div>
-                        <div class="console-button yellow"></div>
-                        <div class="console-button green"></div>
-                    </div>
-                    <div class="console-title">YAN_HE_TERMINAL</div>
-                    <div class="console-prompt">root@yanhe:~$</div>
-                </div>
-                <div class="console-content">
-                    <div class="console-line">
-                        <span class="terminal-prompt">root@yanhe:~$</span>
-                        <span id="command-text" class="command-text"></span>
-                        <span id="command-cursor" class="terminal-cursor"></span>
-                    </div>
-                    <div id="command-output" class="command-output"></div>
-                </div>
-            </div>
-
-            <!-- Research Interests - Compact & Noticeable -->
-            <div class="research-interests-compact">
-                <div class="interests-compact-label">
-                    <span class="text-accent">RESEARCH INTERESTS:</span>
-                </div>
-                <div class="interests-compact-tags">
-                    <span class="interest-compact-tag metal-tag">Cybersecurity</span>
-                    <span class="interest-compact-tag metal-tag">Cyber-Physical and Embedded Systems</span>
-                    <span class="interest-compact-tag metal-tag">Computer Vision</span>
-                </div>
-            </div>
-
-            <!-- Quick Stats -->
-            <div class="stats-grid">
-                <div class="stat-card metal-card">
-                    <svg class="stat-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
-                    </svg>
-                    <div class="stat-value text-green">7</div>
-                    <div class="stat-label">Publications</div>
-                </div>
-                <div class="stat-card metal-card">
-                    <svg class="stat-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-                        <circle cx="9" cy="7" r="4"/>
-                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                    </svg>
-                    <div class="stat-value text-yellow">6</div>
-                    <div class="stat-label">Teaching Assistants Served</div>
-                </div>
-            </div>
-
-            <!-- Social Links -->
-            <div class="social-links">
-                    <a href="https://www.linkedin.com/in/heyanok/" class="social-link metal-social" aria-label="LinkedIn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                        <rect width="4" height="12" x="2" y="9"/>
-                        <circle cx="4" cy="4" r="2"/>
-                    </svg>
-                </a>
-                    <a href="mailto:heyan@ou.edu" class="social-link metal-social" aria-label="Email">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect width="20" height="16" x="2" y="4" rx="2"/>
-                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-                    </svg>
-                </a>
-                    <a href="https://scholar.google.com/citations?user=JjMvRJMAAAAJ" class="social-link metal-social" aria-label="Google Scholar">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"/>
-                        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
-                        <path d="M2 12h20"/>
-                    </svg>
-                </a>
-            </div>
-
+        <p class="lead"><span id="hero-type"></span></p>
+        <div class="hero-actions">
+          <a class="button primary" href="cv.pdf" target="_blank" rel="noopener noreferrer">View CV</a>
         </div>
-
-            <!-- Section Divider -->
-            <div class="section-divider">
-                <div class="divider-line"></div>
-            </div>
-
-            <!-- Right Column: Publications Section -->
-            <div class="publications-column" id="publications">
-                <div class="publications-header">
-                    <h2 class="section-title metal-text">./publications</h2>
-                </div>
-
-            <div class="publications-list">
-                    <div class="console-window metal-border">
-                    <div class="console-header">
-                        <div class="console-buttons">
-                            <div class="console-button red"></div>
-                            <div class="console-button yellow"></div>
-                            <div class="console-button green"></div>
-                        </div>
-                        <div class="console-title">PUBLICATIONS_TERMINAL</div>
-                        <div class="console-prompt">root@yanhe:~$</div>
-                    </div>
-                    <div class="console-content">
-                        <div class="console-line">
-                            <span class="terminal-prompt">root@yanhe:~$</span>
-                            <span>ls -la publications/</span>
-                        </div>
-                        <div class="command-output publications-output">
-                                <div class="publication-item metal-pub-item">
-                                <div class="pub-content-wrapper">
-                                    <div class="pub-thumbnail">
-                                        <img src="NDSS.png" alt="NDSS 2026 Publication" class="pub-thumbnail-img">
-                                    </div>
-                                    <div class="pub-details">
-                                        <div class="pub-header">
-                                            <span class="pub-status status-accepted">[ACCEPTED]</span>
-                                            <span class="pub-year">2026</span>
-                                            <span class="pub-venue">NDSS</span>
-                                            <span class="pub-type">Conference</span>
-                                            <span class="pub-acceptance-rate">Acceptance Rate: 17.49%</span>
-                                        </div>
-                                        <div class="pub-title">PhantomMotion: Laser-Based Motion Injection Attacks on Wireless Security Surveillance Systems</div>
-                                        <div class="pub-authors"><span class="author-highlight">Yan He</span>, Guanchong Huang, and Song Fang</div>
-                                        <div class="pub-link">
-                                            <span class="publication-link disabled">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                                                    <polyline points="15 3 21 3 21 9"/>
-                                                    <line x1="10" x2="21" y1="14" y2="3"/>
-                                                </svg>
-                                                <span>Show PDF (Pending)</span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                                <div class="publication-item metal-pub-item">
-                                <div class="pub-content-wrapper">
-                                    <div class="pub-thumbnail">
-                                        <img src="RAID25.png" alt="RAID 2025 Publication" class="pub-thumbnail-img">
-                                    </div>
-                                    <div class="pub-details">
-                                        <div class="pub-header">
-                                            <span class="pub-status status-published">[PUBLISHED]</span>
-                                            <span class="pub-year">2025</span>
-                                            <span class="pub-venue">RAID</span>
-                                            <span class="pub-type">Conference</span>
-                                            <span class="pub-acceptance-rate">Acceptance Rate: 22.06%</span>
-                                        </div>
-                                        <div class="pub-title">MotionDecipher: General Video-assisted Passcode Inference In Virtual Reality</div>
-                                        <div class="pub-authors">Guanchong Huang, <span class="author-highlight">Yan He</span>, Shangqing Zhao, Yi Wu, and Song Fang</div>
-                                        <div class="pub-link">
-                                            <a href="RAID25.pdf" target="_blank" rel="noopener noreferrer" class="publication-link metal-link">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                                                    <polyline points="15 3 21 3 21 9"/>
-                                                    <line x1="10" x2="21" y1="14" y2="3"/>
-                                                </svg>
-                                                <span>Show PDF</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                                <div class="publication-item metal-pub-item">
-                                <div class="pub-content-wrapper">
-                                    <div class="pub-thumbnail">
-                                        <img src="TMC.png" alt="IEEE TMC 2023 Publication" class="pub-thumbnail-img">
-                                    </div>
-                                    <div class="pub-details">
-                                        <div class="pub-header">
-                                            <span class="pub-status status-published">[PUBLISHED]</span>
-                                            <span class="pub-year">2023</span>
-                                            <span class="pub-venue">IEEE TMC</span>
-                                            <span class="pub-type">Journal</span>
-                                        </div>
-                                        <div class="pub-title">Precise wireless camera localization leveraging traffic-aided spatial analysis</div>
-                                        <div class="pub-authors"><span class="author-highlight">Yan He</span>, Qiuye He, Song Fang, Yao Liu</div>
-                                        <div class="pub-link">
-                                            <a href="TMC.pdf" target="_blank" rel="noopener noreferrer" class="publication-link metal-link">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                                                    <polyline points="15 3 21 3 21 9"/>
-                                                    <line x1="10" x2="21" y1="14" y2="3"/>
-                                                </svg>
-                                                <span>Show PDF</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                                <div class="publication-item metal-pub-item">
-                                <div class="pub-content-wrapper">
-                                    <div class="pub-thumbnail">
-                                        <img src="CCS.png" alt="CCS 2023 Publication" class="pub-thumbnail-img">
-                                    </div>
-                                    <div class="pub-details">
-                                        <div class="pub-header">
-                                            <span class="pub-status status-published">[PUBLISHED]</span>
-                                            <span class="pub-year">2023</span>
-                                            <span class="pub-venue">CCS</span>
-                                            <span class="pub-type">Conference</span>
-                                            <span class="pub-acceptance-rate">Acceptance Rate: 19.1%</span>
-                                        </div>
-                                        <div class="pub-title">When free tier becomes free to enter: A non-intrusive way to identify security cameras with no cloud subscription</div>
-                                        <div class="pub-authors"><span class="author-highlight">Yan He</span>, Qiuye He, Song Fang, and Yao Liu</div>
-                                        <div class="pub-link">
-                                            <a href="CCS.pdf" target="_blank" rel="noopener noreferrer" class="publication-link metal-link">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                                                    <polyline points="15 3 21 3 21 9"/>
-                                                    <line x1="10" x2="21" y1="14" y2="3"/>
-                                                </svg>
-                                                <span>Show PDF</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                                <div class="publication-item metal-pub-item">
-                                <div class="pub-content-wrapper">
-                                    <div class="pub-thumbnail">
-                                        <img src="MobiSys.png" alt="MobiSys 2021 Publication" class="pub-thumbnail-img">
-                                    </div>
-                                    <div class="pub-details">
-                                        <div class="pub-header">
-                                            <span class="pub-status status-published">[PUBLISHED]</span>
-                                            <span class="pub-year">2021</span>
-                                            <span class="pub-venue">MobiSys</span>
-                                            <span class="pub-type">Conference</span>
-                                            <span class="pub-acceptance-rate">Acceptance Rate: 21.7%</span>
-                                        </div>
-                                        <div class="pub-title">Motioncompass: pinpointing wireless camera via motion-activated traffic</div>
-                                        <div class="pub-authors"><span class="author-highlight">Yan He</span>, Qiuye He, Song Fang, and Yao Liu</div>
-                                        <div class="pub-link">
-                                            <a href="MobiSys.pdf" target="_blank" rel="noopener noreferrer" class="publication-link metal-link">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                                                    <polyline points="15 3 21 3 21 9"/>
-                                                    <line x1="10" x2="21" y1="14" y2="3"/>
-                                                </svg>
-                                                <span>Show PDF</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                                <div class="publication-item metal-pub-item">
-                                <div class="pub-content-wrapper">
-                                    <div class="pub-thumbnail">
-                                        <img src="MASS.png" alt="MASS 2020 Publication" class="pub-thumbnail-img">
-                                    </div>
-                                    <div class="pub-details">
-                                        <div class="pub-header">
-                                            <span class="pub-status status-published">[PUBLISHED]</span>
-                                            <span class="pub-year">2020</span>
-                                            <span class="pub-venue">MASS</span>
-                                            <span class="pub-type">Conference</span>
-                                            <span class="pub-acceptance-rate">Acceptance Rate: 29.7%</span>
-                                        </div>
-                                        <div class="pub-title">Virtual Step PIN Pad: Towards Foot-input Authentication Using Geophones</div>
-                                        <div class="pub-authors"><span class="author-highlight">Yan He</span>, Hanyan Zhang, Edwin Yang, and Song Fang</div>
-                                        <div class="pub-link">
-                                            <a href="MASS.pdf" target="_blank" rel="noopener noreferrer" class="publication-link metal-link">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                                                    <polyline points="15 3 21 3 21 9"/>
-                                                    <line x1="10" x2="21" y1="14" y2="3"/>
-                                                </svg>
-                                                <span>Show PDF</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="chips">
+          <span class="chip">Cybersecurity</span>
+          <span class="chip">Cyber-Physical & Embedded Systems</span>
+          <span class="chip">Computer Vision</span>
         </div>
+      </div>
+      <div class="hero-panel reveal">
+        <div class="glass-card console" aria-label="Interactive terminal">
+          <div class="console-header">visitor@yanhe:~$</div>
+          <div class="console-body">
+            <div id="terminal-output" class="terminal-output" aria-live="polite"></div>
+            <form id="terminal-form" class="terminal-form" autocomplete="off">
+              <span class="prompt">$</span>
+              <input id="terminal-input" class="terminal-input" type="text" name="command" placeholder="type 'help'" aria-label="Terminal command" autocomplete="off" maxlength="120" />
+            </form>
+          </div>
+        </div>
+        <div class="glass-card timeline">
+          <p class="eyebrow">Latest updates</p>
+          <div class="timeline-list">
+            <div class="timeline-item">
+              <div class="timeline-date">Oct 2025</div>
+              <div class="timeline-body">
+                <h3>I am on the market for faculty roles!</h3>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">Sep 2025</div>
+              <div class="timeline-body">
+                <h3>PhantomMotion accepted to NDSS 2026</h3>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">Aug 2025</div>
+              <div class="timeline-body">
+                <h3>MotionDecipher accepted to RAID 2025</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <script src="script.js"></script>
+    <section id="publications" class="section reveal">
+
+         <div class="section-header">
+           <p class="eyebrow">Publications</p>
+           <h2>Peer-reviewed work</h2>
+         </div>
+ 
+       <div class="pub-list glass-card">
+         <ul>
+           <li class="pub-row">
+             <div class="pub-thumb">
+               <img src="NDSS.png" alt="NDSS 2026 thumbnail" loading="lazy">
+             </div>
+             <div class="pub-body">
+               <div class="pub-top">
+                 <span class="badge success">Accepted</span>
+                 <span class="tag">NDSS 2026</span>
+                 <span class="tag">Conference</span>
+                 <span class="tag">17.49% AR</span>
+               </div>
+               <h3>PhantomMotion: Laser-Based Motion Injection Attacks on Wireless Security Surveillance Systems</h3>
+               <p class="muted"><span class="author-highlight">Yan He</span>, Guanchong Huang, Song Fang</p>
+               <div class="pub-actions">
+                 <span class="button disabled">PDF pending</span>
+               </div>
+             </div>
+           </li>
+           <li class="pub-row">
+             <div class="pub-thumb">
+               <img src="RAID25.png" alt="RAID 2025 thumbnail" loading="lazy">
+             </div>
+             <div class="pub-body">
+               <div class="pub-top">
+                 <span class="badge">Published</span>
+                 <span class="tag">RAID 2025</span>
+                 <span class="tag">Conference</span>
+                 <span class="tag">22.06% AR</span>
+               </div>
+               <h3>MotionDecipher: General Video-assisted Passcode Inference In Virtual Reality</h3>
+               <p class="muted">Guanchong Huang, <span class="author-highlight">Yan He</span>, Shangqing Zhao, Yi Wu, Song Fang</p>
+               <div class="pub-actions">
+                 <a class="button link" href="RAID25.pdf" target="_blank" rel="noopener noreferrer">Open PDF</a>
+               </div>
+             </div>
+           </li>
+           <li class="pub-row">
+             <div class="pub-thumb">
+               <img src="TMC.png" alt="IEEE TMC 2023 thumbnail" loading="lazy">
+             </div>
+             <div class="pub-body">
+               <div class="pub-top">
+                 <span class="badge">Published</span>
+                 <span class="tag">IEEE TMC 2023</span>
+                 <span class="tag">Journal</span>
+               </div>
+               <h3>Precise wireless camera localization leveraging traffic-aided spatial analysis</h3>
+               <p class="muted"><span class="author-highlight">Yan He</span>, Qiuye He, Song Fang, Yao Liu</p>
+               <div class="pub-actions">
+                 <a class="button link" href="TMC.pdf" target="_blank" rel="noopener noreferrer">Open PDF</a>
+               </div>
+             </div>
+           </li>
+           <li class="pub-row">
+             <div class="pub-thumb">
+               <img src="CCS.png" alt="CCS 2023 thumbnail" loading="lazy">
+             </div>
+             <div class="pub-body">
+               <div class="pub-top">
+                 <span class="badge">Published</span>
+                 <span class="tag">CCS 2023</span>
+                 <span class="tag">Conference</span>
+                 <span class="tag">19.1% AR</span>
+               </div>
+               <h3>When free tier becomes free to enter: Identifying security cameras with no cloud subscription</h3>
+               <p class="muted"><span class="author-highlight">Yan He</span>, Qiuye He, Song Fang, Yao Liu</p>
+               <div class="pub-actions">
+                 <a class="button link" href="CCS.pdf" target="_blank" rel="noopener noreferrer">Open PDF</a>
+               </div>
+             </div>
+           </li>
+           <li class="pub-row">
+             <div class="pub-thumb">
+               <img src="MobiSys.png" alt="MobiSys 2021 thumbnail" loading="lazy">
+             </div>
+             <div class="pub-body">
+               <div class="pub-top">
+                 <span class="badge">Published</span>
+                 <span class="tag">MobiSys 2021</span>
+                 <span class="tag">Conference</span>
+                 <span class="tag">21.7% AR</span>
+               </div>
+               <h3>MotionCompass: Pinpointing wireless cameras via motion-activated traffic</h3>
+               <p class="muted"><span class="author-highlight">Yan He</span>, Qiuye He, Song Fang, Yao Liu</p>
+               <div class="pub-actions">
+                 <a class="button link" href="MobiSys.pdf" target="_blank" rel="noopener noreferrer">Open PDF</a>
+               </div>
+             </div>
+           </li>
+           <li class="pub-row">
+             <div class="pub-thumb">
+               <img src="MASS.png" alt="MASS 2020 thumbnail" loading="lazy">
+             </div>
+             <div class="pub-body">
+               <div class="pub-top">
+                 <span class="badge">Published</span>
+                 <span class="tag">MASS 2020</span>
+                 <span class="tag">Conference</span>
+                 <span class="tag">29.7% AR</span>
+               </div>
+               <h3>Virtual Step PIN Pad: Towards foot-input authentication using geophones</h3>
+               <p class="muted"><span class="author-highlight">Yan He</span>, Hanyan Zhang, Edwin Yang, Song Fang</p>
+               <div class="pub-actions">
+                 <a class="button link" href="MASS.pdf" target="_blank" rel="noopener noreferrer">Open PDF</a>
+               </div>
+             </div>
+           </li>
+         </ul>
+       </div>
+     </section>
+
+     <section id="courses" class="section reveal">
+       <div class="section-header">
+         <p class="eyebrow">Course assisted at OU</p>
+         <h2>Teaching assistantships</h2>
+         <p class="muted">Guiding labs, grading, and project support across core systems and applied CS.</p>
+       </div>
+       <div class="course-list glass-card">
+         <ul>
+           <li class="course-row">
+             <div class="course-icon">ES</div>
+             <div class="course-body">
+               <div class="course-head">
+                 <h3>Embedded Systems</h3>
+                 <span class="course-term">Fall 2022</span>
+               </div>
+               <p class="muted">Guided RTOS labs, peripheral drivers, timing analysis, and deploy-on-hardware checkouts.</p>
+             </div>
+           </li>
+           <li class="course-row">
+             <div class="course-icon">OS</div>
+             <div class="course-body">
+               <div class="course-head">
+                 <h3>Operating Systems</h3>
+                 <span class="course-term">SP 2023 · Fall 2022, 2023</span>
+               </div>
+               <p class="muted">Led recitations on CPU scheduling, synchronization primitives, paging/segmentation, and kernel tracing labs.</p>
+             </div>
+           </li>
+           <li class="course-row">
+             <div class="course-icon">SEC</div>
+             <div class="course-body">
+               <div class="course-head">
+                 <h3>Computer Security</h3>
+                 <span class="course-term">Fall 2020, 2021, 2024 · SP 2024, 2025</span>
+               </div>
+               <p class="muted">Ran labs on threat modeling, packet analysis, web/app hardening, and guided secure coding/code review sessions.</p>
+             </div>
+           </li>
+           <li class="course-row">
+             <div class="course-icon">ML</div>
+             <div class="course-body">
+               <div class="course-head">
+                 <h3>Machine Learning</h3>
+                 <span class="course-term">SP 2021</span>
+               </div>
+               <p class="muted">Supported students on model training workflows, validation/metrics, hyperparameter tuning, and project mentorship.</p>
+             </div>
+           </li>
+           <li class="course-row">
+             <div class="course-icon">DB</div>
+             <div class="course-body">
+               <div class="course-head">
+                 <h3>Database Management</h3>
+                 <span class="course-term">Fall 2025</span>
+               </div>
+               <p class="muted">Taught SQL labs, schema design and normalization, indexing strategies, and query plan performance tuning.</p>
+             </div>
+           </li>
+           <li class="course-row">
+             <div class="course-icon">CO</div>
+             <div class="course-body">
+               <div class="course-head">
+                 <h3>Computer Organization</h3>
+                 <span class="course-term">SP 2020</span>
+               </div>
+               <p class="muted">Facilitated logic design labs, pipelined CPU walkthroughs, and ISA fundamentals with hands-on simulation exercises.</p>
+             </div>
+           </li>
+         </ul>
+       </div>
+     </section>
+ 
+     <section id="contact" class="section reveal">
+
+      <div class="contact-card glass-card">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Let's collaborate or chat about research.</h2>
+          <p class="muted">Email is the fastest way to reach me. I also keep LinkedIn and Google Scholar current.</p>
+          <div class="chips">
+            <a class="chip link-chip" href="mailto:heyan@ou.edu">Email</a>
+            <a class="chip link-chip" href="https://www.linkedin.com/in/heyanok/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="chip link-chip" href="https://scholar.google.com/citations?user=JjMvRJMAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          </div>
+        </div>
+        <a class="button primary" href="mailto:heyan@ou.edu">Start a conversation</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -263,12 +263,29 @@ body.theme-dark .chip-row .chip {
 }
 
 .chip {
-  padding: 8px 12px;
+  padding: 10px 14px;
   border-radius: 999px;
-  background: #eef2ff;
-  color: var(--muted);
-  border: 1px solid var(--border);
+  background: linear-gradient(120deg, #eef2ff, #f5f7ff);
+  color: var(--text);
+  border: 1px solid #dfe3f0;
   font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+
+.link-chip { color: var(--text); border-color: #dfe3f0; }
+
+.chip-icon {
+  font-size: 0.95rem;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #e0e7ff;
+  color: #1d4ed8;
 }
 
 .link-chip { color: var(--accent); border-color: #c7d2fe; background: #f5f7ff; }
@@ -457,6 +474,40 @@ body.theme-dark .chip-row .chip {
 
 .pub-row p { margin: 0; }
 
+.patent-list ul { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+
+.patent-row {
+  padding: 12px 0 14px;
+  border-bottom: 1px solid var(--border);
+  display: grid;
+  gap: 6px;
+}
+
+.patent-row:last-child { border-bottom: none; }
+
+.patent-head { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+
+.patent-meta { margin: 0; color: var(--muted); font-size: 0.96rem; }
+
+.badge {
+  background: #eef2ff;
+  border: 1px solid #c7d2fe;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-weight: 700;
+  color: #1d4ed8;
+}
+
+
+.venue-accept {
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: 0.93rem;
+  font-style: italic;
+}
+
+.pub-row p { margin: 0; }
+
 .course-list ul { list-style: none; display: flex; flex-direction: column; gap: 14px; }
 
 .course-row {
@@ -529,11 +580,15 @@ body.theme-dark .chip-row .chip {
 .pub-actions { margin-top: 8px; }
 
 .contact-card {
-  display: flex;
-  gap: 18px;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
   align-items: center;
-  flex-wrap: wrap;
+  padding: 18px 20px;
+}
+
+@media (max-width: 720px) {
+  .contact-card { grid-template-columns: 1fr; }
 }
 
 .reveal { opacity: 0; transform: translateY(14px); transition: opacity 420ms ease, transform 420ms ease; }

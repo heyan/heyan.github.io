@@ -76,6 +76,10 @@ const COURSES = [
   'Computer Organization'
 ];
 
+let gameActive = false;
+let gameNumber = null;
+let gameAttempts = 0;
+
 function appendLine(container, text, className) {
   const line = document.createElement('div');
   line.className = className ? `terminal-line ${className}` : 'terminal-line';
@@ -106,6 +110,32 @@ function appendContactLines(outputEl) {
   appendLine(outputEl, 'Google Scholar: scholar.google.com/citations?user=JjMvRJMAAAAJ');
 }
 
+function startGame(outputEl) {
+  gameActive = true;
+  gameNumber = Math.floor(Math.random() * 20) + 1;
+  gameAttempts = 0;
+  appendLine(outputEl, 'Guess a number between 1 and 20. Type quit to exit.');
+}
+
+function handleGameGuess(outputEl, input) {
+  const guess = Number(input);
+  if (Number.isNaN(guess)) {
+    appendLine(outputEl, 'Enter a number between 1 and 20, or type quit to exit.');
+    return;
+  }
+  gameAttempts += 1;
+  if (guess === gameNumber) {
+    appendLine(outputEl, `Correct! You guessed it in ${gameAttempts} tries.`);
+    gameActive = false;
+    gameNumber = null;
+    gameAttempts = 0;
+  } else if (guess < gameNumber) {
+    appendLine(outputEl, 'Too low.');
+  } else {
+    appendLine(outputEl, 'Too high.');
+  }
+}
+
 function initTerminal() {
   const outputEl = document.getElementById('terminal-output');
   const form = document.getElementById('terminal-form');
@@ -125,25 +155,42 @@ function initTerminal() {
     "pub <key>           details for a publication",
     "courses             list courses assisted",
     "cv                  link to CV",
+    "game                play a number guess (1-20)",
+    "quit                exit game mode",
+    "theme <light|dark>  switch terminal/page theme",
     "clear               clear the terminal"
   ];
 
   function runCommand(raw) {
     const cmd = raw.trim();
     if (!cmd) {
-  appendLine(outputEl, "Welcome to my page! Type 'help' to explore this cute terminal.");
-
-    return;
-
+      appendLine(outputEl, "Welcome to my page! Type 'help' to explore this cute terminal.");
+      return;
     }
     appendLine(outputEl, `$ ${cmd}`, 'user');
 
     const [base, ...rest] = cmd.split(/\s+/);
     const arg = rest.join(' ');
 
+    if (gameActive && base.toLowerCase() !== 'quit') {
+      handleGameGuess(outputEl, cmd);
+      return;
+    }
+
     switch (base.toLowerCase()) {
       case 'help':
         helpText.forEach(line => appendLine(outputEl, line));
+        break;
+      case 'theme':
+        if (arg.toLowerCase() === 'dark') {
+          document.body.classList.add('theme-dark');
+          appendLine(outputEl, 'Theme set to dark.');
+        } else if (arg.toLowerCase() === 'light') {
+          document.body.classList.remove('theme-dark');
+          appendLine(outputEl, 'Theme set to light.');
+        } else {
+          appendLine(outputEl, "Usage: theme <light|dark>");
+        }
         break;
       case 'about':
         appendLine(outputEl, 'Yan He — PhD candidate focusing on cybersecurity, cyber-physical systems, and computer vision.');
@@ -195,6 +242,19 @@ function initTerminal() {
       case 'cv':
         appendLine(outputEl, 'Opening CV: cv.pdf');
         window.location.href = 'cv.pdf';
+        break;
+      case 'game':
+        startGame(outputEl);
+        break;
+      case 'quit':
+        if (gameActive) {
+          appendLine(outputEl, 'Exited game.');
+          gameActive = false;
+          gameNumber = null;
+          gameAttempts = 0;
+        } else {
+          appendLine(outputEl, 'No active game to quit.');
+        }
         break;
       case 'clear':
         outputEl.innerHTML = '';

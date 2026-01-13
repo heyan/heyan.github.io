@@ -29,6 +29,60 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+body.theme-dark {
+  --card: #0f172a;
+  --card-strong: #0b1220;
+  --border: #1f2937;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #5eead4;
+  --accent-2: #7c3aed;
+  background: radial-gradient(1200px at 20% 10%, rgba(94, 234, 212, 0.08), transparent),
+    radial-gradient(900px at 80% 0%, rgba(124, 58, 237, 0.1), transparent),
+    linear-gradient(180deg, #0b1220 0%, #0a0f1a 80%);
+}
+
+body.theme-dark .glass-card,
+body.theme-dark .mini-bio,
+body.theme-dark .pub-list,
+body.theme-dark .course-list,
+body.theme-dark .timeline,
+body.theme-dark .console-body {
+  background: rgba(15, 23, 42, 0.9);
+  border-color: #1f2937;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+body.theme-dark .nav-shell {
+  background: rgba(10, 15, 26, 0.9);
+  border-bottom-color: #1f2937;
+}
+
+body.theme-dark .terminal-input {
+  background: #0b1220;
+  color: #e5e7eb;
+  border-color: #1f2937;
+}
+
+body.theme-dark .terminal-input:focus {
+  border-color: #5eead4;
+  box-shadow: 0 0 0 2px rgba(94, 234, 212, 0.3);
+}
+
+body.theme-dark .badge,
+body.theme-dark .tag,
+body.theme-dark .chip,
+body.theme-dark .course-term,
+body.theme-dark .timeline-date,
+body.theme-dark .link-chip,
+body.theme-dark .button.link,
+body.theme-dark .button.ghost,
+body.theme-dark .chip-row .chip {
+  background: rgba(255, 255, 255, 0.06);
+  color: #e5e7eb;
+  border-color: #1f2937;
+}
+
 .nav-shell {
   position: sticky;
   top: 0;
@@ -117,12 +171,12 @@ body {
 }
 
 .avatar {
-  width: 160px;
-  height: 160px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   overflow: hidden;
   border: 4px solid #e5e7eb;
-  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.16);
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.16);
   background: #fff;
 }
 
@@ -386,6 +440,20 @@ body {
 .pub-top { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
 
 .pub-row h3 { margin: 0; font-size: 1.05rem; }
+
+.venue-line {
+  margin: 2px 0 2px;
+  color: var(--muted);
+  font-size: 0.96rem;
+  font-weight: 600;
+}
+
+.venue-accept {
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: 0.93rem;
+  font-style: italic;
+}
 
 .pub-row p { margin: 0; }
 
